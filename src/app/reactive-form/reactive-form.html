@@ -1,0 +1,26 @@
+<section>
+    <form [formGroup]="myForm">
+        <div>
+        <input type="text" 
+        formControlName = "password"
+         placeholder="pass"
+        >
+        @if (myForm.get('password')?.hasError("wrong")&& myForm.get('password')?.touched)
+        {
+            <p class="alert">Incorrect pass</p>
+        }
+        </div>
+
+        <div>
+            <input type="text"
+            formControlName ="date"
+            placeholder="date"
+            >
+            @if (myForm.get('date')?.hasError("wrong")&& myForm.get('date')?.touched)
+        {
+            <p class="alert">Incorrect date</p>
+        }
+        </div>
+
+    </form>
+</section>

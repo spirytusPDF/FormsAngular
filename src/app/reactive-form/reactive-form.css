@@ -1,0 +1,81 @@
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+form {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #1e293b;
+  background-color: #f1f5f9;
+  border: 1.5px solid transparent;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]::placeholder {
+  color: #94a3b8;
+}
+
+input[type="text"]:focus {
+  background-color: #ffffff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+input.ng-invalid.ng-touched {
+  background-color: #fef2f2;
+  border-color: #ef4444;
+}
+
+input.ng-invalid.ng-touched:focus {
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.15);
+}
+
+.alert {
+  margin: 0.35rem 0 0 0;
+  color: #dc2626;
+  font-size: 0.825rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
